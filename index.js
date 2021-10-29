@@ -27,6 +27,11 @@ app.get('/sms/send/', (request, response) => {
     response.send('sended')
 })
 
+app.post('/webhooks/inbound', (request, response) => {
+    console.log(request.body);
+    response.status(200).end();
+  });
+
 app.listen(3000, () => {     
  console.log('Server listening at http://localhost:3000')
 })
