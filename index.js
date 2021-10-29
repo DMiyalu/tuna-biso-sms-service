@@ -2,15 +2,15 @@ const express = require('express')
 const data = require('./data')
 const { sendDiffusion, welcome } = require('./controller')
 const app = express()
-const {  
- json,     
- urlencoded  
-} = express  
+const {
+ json, 
+ urlencoded
+} = express
+const PORT = 3000 || process.env.PORT
+app.use(json())
 
-app.use(json())  
-
-app.use(urlencoded({     
- extended: true  
+app.use(urlencoded({
+ extended: true
 }))
 
 app.get('/', (request, response) => {
