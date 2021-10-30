@@ -13,21 +13,6 @@ app.use('/', (request, response) => {
     response.send('Welcome on sms service')
 })
 
-// app.get('/sms/diffusion/', (request, response) => {
-//     sendDiffusion(data.contactListFake, welcome)
-//     response.send('sended')
-// })
-
-// app.get('/sms/send/', (request, response) => {
-//     sendCustomSms(data.phone, welcome)
-//     response.send('sended')
-// })
-
-// app.post('/webhooks/inbound', (request, response) => {
-//     console.log(request.body);
-//     response.status(200).end();
-//   });
-
 app.listen(PORT, HOST, () => {    
- console.log(`Server listening at http://localhost:${PORT}`)
+ console.log(`Server running on port ${PORT}`)
 })
